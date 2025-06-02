@@ -3,6 +3,8 @@ const app = express();
 const mongoose = require("mongoose");
 const jwt=require('jsonwebtoken')
 app.use(express.json());
+const cors = require("cors");
+app.use(cors());
 
 const mongoURL = "mongodb+srv://vamshi:admin@cluster0.ot9dxkf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
