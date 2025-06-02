@@ -4,13 +4,13 @@ const mongoose = require("mongoose");
 const jwt=require('jsonwebtoken')
 app.use(express.json());
 const cors = require("cors");
-app.use(cors());
+require("dotenv").config(); 
 
 const mongoURL = "mongodb+srv://vamshi:admin@cluster0.ot9dxkf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
 
-mongoose.connect(mongoURL, {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
